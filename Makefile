@@ -2,7 +2,7 @@ NAME=ircserv
 
 # Compiler options
 CC 			= c++
-CXXFLAGS	= -g -Wall -Wextra -Werror -Wconversion -std=c++98
+CXXFLAGS	= -g -Wall -Wextra -Werror #-std=c++98 -Wconversion 
 RM			= rm -rf
 PRINT_INFO	= -info
 
@@ -48,8 +48,7 @@ re: fclean all
 
 run: re
 	@echo $(BLUE) $(NAME) "starting..." $(RESET)
-	@echo $(BLUE) $(NAME) "TO DO..." $(RESET)
-#	@./$(NAME) $(TEST_FILE)
+	@./$(NAME)
 
 val: re
 	@echo $(BLUE) $(NAME) "starting with valgrind..." $(RESET)
