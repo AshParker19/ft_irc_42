@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Channel.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: anshovah <anshovah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 23:23:47 by anshovah          #+#    #+#             */
-/*   Updated: 2024/05/05 02:02:43 by astein           ###   ########.fr       */
+/*   Updated: 2024/05/05 04:02:01 by anshovah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ class Channel
     
 	//TODO: if all the ops left the channel, kick all the clients and delete the channel
 		bool					isActive() const;
+        void	                manageMode(Message &msg);
     private:
 		bool					isClientInChannel(const Client &client) const;
 

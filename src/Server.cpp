@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: anshovah <anshovah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 22:55:11 by astein            #+#    #+#             */
-/*   Updated: 2024/05/05 02:13:38 by astein           ###   ########.fr       */
+/*   Updated: 2024/05/05 04:09:43 by anshovah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -452,10 +452,27 @@ void	Server::topic(Message &message)
 	
 }
 
-void	Server::mode(Message &message)
+void	Server::mode(Message &message) //  472 ash222 5 :is unknown mode char to me
 {
-	(void)message;
 	// MODE #<channelName> flag
+
+	// WITHOUT ARGS
+	if (message.getArg(0).empty())
+	{
+		// sendChannelInfo();
+		return ;
+	}
+
+	// CHECK IF CHANNEL EXISTS
+	// message.getSender().sendMessage(ERR_NOSUCHCHANNEL, message.getArg(0) + " :No such channel");
+	// message.getSender().sendMessage(ERR_NOSUCHCHANNEL, message.getChannelName() + " :No such channel");
+
+	// CHECK IF A FLAG HAS A VALID FORMAT
+	
+
+	//errorse here
+	//functilanilty here
+	message.getChannel()->manageMode(message);
 }
 
 void	Server::kick(Message &message)

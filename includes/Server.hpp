@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Server.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: anshovah <anshovah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 22:55:18 by astein            #+#    #+#             */
-/*   Updated: 2024/05/05 02:00:26 by astein           ###   ########.fr       */
+/*   Updated: 2024/05/05 03:59:31 by anshovah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ class Server
 		void	addChannel(Channel channel);
 		void	removeChannel(Channel *channel);
 		Channel	*createNewChannel(Message &msg);
+		void	manageMode(Message &msg);
 
 	// -------------------------------------------------------------------------
 	// Attributes

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   codes.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: astein <astein@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: anshovah <anshovah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 02:01:01 by anshovah          #+#    #+#             */
-/*   Updated: 2024/05/05 00:38:12 by astein           ###   ########.fr       */
+/*   Updated: 2024/05/05 03:14:15 by anshovah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@
 // EVERYTHING BELOW IS NOT USED YET
 // -----------------------------------------------------------------------------
 
+#define ERR_UMODEUNKNOWNFLAG    501     // ":Unknown MODE flag"
 
 
 // privmsg
@@ -54,7 +55,7 @@
 // mode
 #define ERR_UNKNOWNMODE         472     // "<char> :is unknown mode char to me"
 #define ERR_USERSDONTMATCH      502     // ":Cant change mode for other users"
-#define ERR_UMODEUNKNOWNFLAG    501     // ":Unknown MODE flag"
+
 #define RPL_UMODEIS             221     // "<user mode string>"
 
 // kick N join 
